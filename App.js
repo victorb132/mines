@@ -6,7 +6,6 @@ import { createMineField, createMinedBoard, cloneBoard,
     openField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed} from './src/Logic'
 import Header from './src/components/Header'
 import LevelSelection from './src/screens/LevelSelection'
-import { Level } from 'chalk';
 
 export default class App extends Component{
 
