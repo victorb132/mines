@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import {Platform, StyleSheet, Text, View, Alert } from 'react-native'
-import params from './src/Params'
-import MineField from './src/components/MineField'
+import {Platform, StyleSheet, View, Alert } from 'react-native'
+import params from './src/utils/Params'
+import { MineField } from './src/components/MineField'
 import { createMineField, createMinedBoard, cloneBoard, 
-    openField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed} from './src/Logic'
-import Header from './src/components/Header'
-import LevelSelection from './src/screens/LevelSelection'
+    openField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed} from './src/utils/Logic'
+import { Header } from './src/components/Header'
+import { LevelSelection } from './src/screens/LevelSelection'
 
 export default class App extends Component{
 
@@ -17,12 +17,14 @@ export default class App extends Component{
   minesAmount = () => {
     const cols = params.getColumnsAmount()
     const rows = params.getRowsAmount()
+
     return Math.ceil(cols * rows * params.difficultLevel)
   }
 
   createState = () => {
     const cols = params.getColumnsAmount()
     const rows = params.getRowsAmount()
+
     return{
       board: createMinedBoard(rows, cols, this.minesAmount()),
       won: false,
@@ -33,7 +35,9 @@ export default class App extends Component{
 
   onOpenField = (row, column) => {
     const board = cloneBoard(this.state.board)
+    
     openField(board, row, column)
+
     const lost = hadExplosion(board)
     const won = wonGame(board)
 
