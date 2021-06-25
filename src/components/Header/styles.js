@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
       minWidth: 30,
   },
   flagsLeft: {
-      fontSize: 30,
+      fontSize: RFValue(30),
       fontWeight: 'bold',
       paddingTop: 5,
       marginLeft: 20,
@@ -26,9 +27,10 @@ const styles = StyleSheet.create({
   button: {
       backgroundColor: '#999',
       padding: 5,
+      borderRadius: 10
   },
   buttonLabel: {
-      fontSize: 20,
+      fontSize: RFValue(20),
       color: '#DDD',
       fontWeight: 'bold',
   },

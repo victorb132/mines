@@ -1,10 +1,12 @@
 import { Dimensions } from 'react-native'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 const params = {
     blockSize: 30,
     borderSize: 5,
-    fontSize: 15,
-    headerRatio: 0.15, //Proporção do cabeçalho
+    borderRadius: 30,
+    fontSize: RFValue(15),
+    headerRatio: 0.15,
     difficultLevel: 0.1,
     getColumnsAmount(){
         const width = Dimensions.get('window').width

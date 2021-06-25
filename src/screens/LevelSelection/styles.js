@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 const styles = StyleSheet.create({
   frame: {
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
       padding: 15,
   },
   title: {
-      fontSize: 30,
+      fontSize: RFValue(30),
       fontWeight: 'bold',
   },
   button: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
       padding: 5,
   },
   buttonLabel: {
-      fontSize: 20,
+      fontSize: RFValue(20),
       color: '#EEE',
       fontWeight: 'bold',
   },

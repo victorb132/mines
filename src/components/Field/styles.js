@@ -6,16 +6,17 @@ const styles = StyleSheet.create({
       height: params.blockSize,
       width: params.blockSize,
       borderWidth: params.borderSize,
+      borderRadius: params.borderRadius
   },
   regular: {
       backgroundColor: '#999',
-      borderLeftColor: '#CCC',
-      borderTopColor: '#CCC',
+      borderLeftColor: '#333',
+      borderTopColor: '#333',
       borderRightColor: '#333',
       borderBottomColor: '#333'
   },
   opened: {
-      backgroundColor: '#999',
+      backgroundColor: '#fff',
       borderColor: '#777',
       alignItems: 'center',
       justifyContent: 'center',
