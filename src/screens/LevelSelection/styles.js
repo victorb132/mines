@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   button: {
       marginTop: 10,
       padding: 5,
+      borderRadius: 10,
   },
   buttonLabel: {
       fontSize: RFValue(20),
